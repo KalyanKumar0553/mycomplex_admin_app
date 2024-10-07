@@ -1,0 +1,30 @@
+<div class="wrapper" *ngIf="state==AuthStateConstants.LOGIN_STATE">
+    <div id="formContent">
+        <div class="fadeIn first">
+            <img src="./assets/img/logo.png" id="icon" alt="User Icon" />
+        </div>
+        <form id="loginForm">
+            <input type="text" id="email" name="email" placeholder="Please Enter Email">
+            <input type="password" id="password" name="password" placeholder="Please Enter Password">
+            <input type="submit" id="loginBtn" value="Log In" (click)="login()">
+        </form>
+        <div id="formFooter">
+            <a class="underlineHover" href="#" (click)="updateStateToForgotPassword()">Forgot Password ?</a>
+        </div>
+    </div>
+</div>
+<div class="wrapper" *ngIf="state==AuthStateConstants.FORGOT_PASSWORD_STATE">
+    <div id="formContent">
+        <div class="fadeIn first">
+            <img src="./assets/img/logo.png" id="icon" alt="User Icon" />
+        </div>
+        <form id="resetPasswordForm">
+            <input type="text" id="login" name="email" placeholder="Please Enter Username">
+            <input type="submit" id="resetBtn" value="Reset Password">
+        </form>
+        <div id="formFooter">
+            <a class="underlineHover" href="#" (click)="updateStateToLogin()">Back to Login ?</a>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

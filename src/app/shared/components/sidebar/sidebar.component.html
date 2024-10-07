@@ -1,0 +1,34 @@
+<div class="logo">
+  <a href="#" class="simple-text">
+    <div class="logo-img">
+      <img src="./assets/img/logo.png" />
+    </div>
+  </a>
+</div>
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li routerLinkActive="active" class="{{dashboardRoute.class}} nav-item">
+      <a class="nav-link" [routerLink]="[dashboardRoute.path]">
+        <i class="material-icons">{{dashboardRoute.icon}}</i>
+        <p style="font-weight:500;">{{dashboardRoute.title}}</p>
+      </a>
+    </li>
+    <li>
+      <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="nav-link">
+              <p style="color:#3c4858;">Complex</p>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <li routerLinkActive="active" *ngFor="let menuItem of complexRoute" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+              <i class="material-icons">{{menuItem.icon}}</i>
+              <p>{{menuItem.title}}</p>
+            </a>
+          </li>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+  </ul>
+</div>
