@@ -7,5 +7,7 @@ export enum ResponseErrors {
   NETWORK_DISCONNECTED = "Could not connect to internet, check your network connections",
 }
 export enum ApiUrls {
-  LOGOUT = '/logout'
+  LOGOUT = '/auth/logout',
+  LOGIN = '/auth/login',
+  SEND_OTP = '/auth/send_otp'
 }

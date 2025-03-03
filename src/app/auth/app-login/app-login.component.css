@@ -163,3 +163,7 @@ input[type=text]:placeholder,input[type=password]:placeholder {
 #icon {
   width: 60%;
 }
+.error-label {
+  margin-top: 6px;
+  color: #ad5473;
+}

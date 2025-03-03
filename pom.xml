@@ -139,6 +139,10 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.7</version>
@@ -186,37 +190,37 @@
 				</configuration>
 				<executions>
 					<execution>
-							 <id>install node and npm</id>
-							 <goals>
-									<goal>install-node-and-npm</goal>
-							 </goals>
-							 <configuration>
-								 <nodeVersion>v21.7.3</nodeVersion>
-								 <npmVersion>10.5.0</npmVersion>
-								 <nodeDownloadRoot>http://nodejs.org/dist/</nodeDownloadRoot>
-								 <npmDownloadRoot>http://registry.npmjs.org/npm/-/</npmDownloadRoot>
-							 </configuration>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v21.7.3</nodeVersion>
+							<npmVersion>10.5.0</npmVersion>
+							<nodeDownloadRoot>http://nodejs.org/dist/</nodeDownloadRoot>
+							<npmDownloadRoot>http://registry.npmjs.org/npm/-/</npmDownloadRoot>
+						</configuration>
 					</execution>
 					<execution>
 						<id>npm install</id>
-					  <goals>
-						  <goal>npm</goal>
-					  </goals>
+						<goals>
+							<goal>npm</goal>
+						</goals>
 						<phase>generate-resources</phase>
-            <configuration>
-								<arguments>install</arguments>
-					  </configuration>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
 					</execution>
 					<execution>
-	           <id>npm run build</id>
-             <goals>
-	             <goal>npm</goal>
-             </goals>
-             <phase>generate-resources</phase>
-            <configuration>
-            	<arguments>run build</arguments>
-            </configuration>
-          </execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
